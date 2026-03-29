@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nasim – Upload Photo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Nasim</h1>
+      <p class="tagline">Deep Search</p>
+    </header>
+
+    <main>
+      <section class="upload-section">
+        <h2>Upload Photo</h2>
+
+        <div
+          class="drop-zone"
+          id="dropZone"
+          role="button"
+          tabindex="0"
+          aria-label="Drop zone – click or drag a photo here"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+          </svg>
+          <p>Drag &amp; drop a photo here, or <span class="link">browse</span></p>
+          <p class="hint">Supports: JPG, PNG, GIF, WebP (max 10 MB)</p>
+          <input
+            type="file"
+            id="fileInput"
+            accept="image/jpeg,image/png,image/gif,image/webp"
+            aria-label="Select a photo"
+          />
+        </div>
+
+        <div class="preview-area" id="previewArea" hidden>
+          <h3>Preview</h3>
+          <div class="preview-wrapper">
+            <img id="previewImage" src="" alt="Preview of the selected photo" />
+          </div>
+          <div class="file-info" id="fileInfo"></div>
+          <div class="actions">
+            <button class="btn btn-secondary" id="clearBtn" type="button">Remove</button>
+            <button class="btn btn-primary" id="uploadBtn" type="button">Upload</button>
+          </div>
+        </div>
+
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
